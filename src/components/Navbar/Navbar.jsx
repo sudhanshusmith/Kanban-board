@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { DownArrowIcon, UpArrowIcon } from "../Icon/Icon";
+import { DownArrowIcon, SettingIcon } from "../Icon/Icon";
 import "./Navbar.css";
 
 const Navbar = ({ groupBy, orderBy, setGroupBy, setOrderBy }) => {
@@ -57,10 +57,10 @@ const Navbar = ({ groupBy, orderBy, setGroupBy, setOrderBy }) => {
     <div className="navbar">
       <div className="dropdown-container" ref={dropdownRef}>
         <button className="dropdown-button" onClick={toggleDropdown}>
-          <span className="material-icons icon">tune</span>
+          <SettingIcon />
           <span className="text">Display</span>
           <span className="icon">
-            {isOpen ? <UpArrowIcon /> : <DownArrowIcon />}
+            <DownArrowIcon />
           </span>
         </button>
         {isOpen && (
@@ -77,7 +77,7 @@ const Navbar = ({ groupBy, orderBy, setGroupBy, setOrderBy }) => {
                   <option value="user">User</option>
                   <option value="priority">Priority</option>
                 </select>
-                {isGroupingOpen ? <UpArrowIcon /> : <DownArrowIcon />}
+                <DownArrowIcon />
               </div>
             </div>
             <div className="dropdown-section">
@@ -91,7 +91,7 @@ const Navbar = ({ groupBy, orderBy, setGroupBy, setOrderBy }) => {
                   <option value="priority">Priority</option>
                   <option value="title">Title</option>
                 </select>
-                {isOrderingOpen ? <UpArrowIcon /> : <DownArrowIcon />}
+                <DownArrowIcon />
               </div>
             </div>
           </div>

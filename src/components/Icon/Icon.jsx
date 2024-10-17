@@ -1,5 +1,28 @@
 import React from "react";
+import add from "../../assets/icons/add.svg";
+import backlog from "../../assets/icons/backlog.svg";
+import cancel from "../../assets/icons/cancel.svg";
+import correct from "../../assets/icons/correct.svg";
+import down from "../../assets/icons/down.svg";
+import high from "../../assets/icons/high.svg";
+import low from "../../assets/icons/low.svg";
+import medium from "../../assets/icons/medium.svg";
+import menu from "../../assets/icons/menu.svg";
+import nopriority from "../../assets/icons/nopriority.svg";
+import progress from "../../assets/icons/progress.svg";
+import setting from "../../assets/icons/setting.svg";
+import todo from "../../assets/icons/todo.svg";
+import urgentc from "../../assets/icons/urgentc.svg";
+import urgentg from "../../assets/icons/urgentg.svg";
 import "./Icon.css";
+
+// export const DownArrowIcon = () => {
+//   return <img src={down} alt="down" className="svgIcon" />;
+// };
+
+export const SettingIcon = () => {
+  return <img src={setting} alt="Setting" className="svgIcon" />;
+};
 
 export const DownArrowIcon = () => (
   <svg
@@ -18,90 +41,37 @@ export const DownArrowIcon = () => (
   </svg>
 );
 
-export const UpArrowIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className="feather feather-chevron-up"
-  >
-    <polyline points="18 15 12 9 6 15"></polyline>
-  </svg>
-);
-
 export const getPriorityIcon = (priority) => {
   switch (priority) {
     case 0:
-      return <div className="icon no-priority">---</div>; // No priority
+      return <img src={nopriority} alt="No priority" className="svgIcon" />;
     case 1:
-      return (
-        <div className={`icon priority-${priority} allPriority`}>
-          <div className="bar first-bar"></div>
-          <div className="bar second-bar"></div>
-          <div className="bar third-bar"></div>
-        </div>
-      );
+      return <img src={low} alt="Low" className="svgIcon" />;
     case 2:
-      return (
-        <div className={`icon priority-${priority} allPriority`}>
-          <div className="bar first-bar"></div>
-          <div className="bar second-bar"></div>
-          <div className="bar third-bar"></div>
-        </div>
-      );
+      return <img src={medium} alt="Medium" className="svgIcon" />;
     case 3:
-      return (
-        <div className={`icon priority-${priority} allPriority`}>
-          <div className="bar first-bar"></div>
-          <div className="bar second-bar"></div>
-          <div className="bar third-bar"></div>
-        </div>
-      );
+      return <img src={high} alt="High" className="svgIcon" />;
     case 4:
-      return <div className="icon urgent-priority">!</div>; // Urgent priority
+      return <img src={urgentg} alt="Urgent" className="svgIcon" />;
     default:
-      return <div className="icon no-priority">---</div>; // Default to "No priority"
+      return <img src={nopriority} alt="No priority" className="svgIcon" />;
   }
 };
 
 export const getPriorityIconByText = (priority) => {
   switch (priority) {
     case "No priority":
-      return <div className="icon no-priority ins">---</div>; // No priority
+      return <img src={nopriority} alt="No priority" className="svgIcon" />;
     case "Low":
-      return (
-        <div className={`icon priority-1 allPriority`}>
-          <div className="bar first-bar"></div>
-          <div className="bar second-bar"></div>
-          <div className="bar third-bar"></div>
-        </div>
-      );
+      return <img src={low} alt="Low" className="svgIcon" />;
     case "Medium":
-      return (
-        <div className={`icon priority-2 allPriority`}>
-          <div className="bar first-bar"></div>
-          <div className="bar second-bar"></div>
-          <div className="bar third-bar"></div>
-        </div>
-      );
+      return <img src={medium} alt="Medium" className="svgIcon" />;
     case "High":
-      return (
-        <div className={`icon priority-3 allPriority`}>
-          <div className="bar first-bar"></div>
-          <div className="bar second-bar"></div>
-          <div className="bar third-bar"></div>
-        </div>
-      );
+      return <img src={high} alt="High" className="svgIcon" />;
     case "Urgent":
-      return <div className="icon urgent-priority">!</div>; // Urgent priority
+      return <img src={urgentc} alt="Urgent" className="svgIcon" />;
     default:
-      return <div className="icon no-priority">---</div>; // Default to "No priority"
+      return <img src={nopriority} alt="No priority" className="svgIcon" />;
   }
 };
 
@@ -125,15 +95,17 @@ export const getPriorityLabel = (priority) => {
 export const getStatusIcon = (status) => {
   switch (status.toLowerCase()) {
     case "todo":
-      return <div className="status-icon todo-icon"></div>;
+      return <img src={todo} alt="To do" className="svgIcon" />;
+    case "backlog":
+      return <img src={backlog} alt="Backlog" className="svgIcon" />;
     case "in progress":
-      return <div className="status-icon in-progress-icon"></div>;
+      return <img src={progress} alt="In progress" className="svgIcon" />;
     case "done":
-      return <div className="status-icon done-icon">&#10003;</div>;
+      return <img src={correct} alt="Done" className="svgIcon" />;
     case "canceled":
-      return <div className="status-icon canceled-icon">&#10005;</div>;
+      return <img src={cancel} alt="Canceled" className="svgIcon" />;
     default:
-      return <div className="status-icon default-icon"></div>;
+      return <img src={todo} alt="To do" className="svgIcon" />;
   }
 };
 
@@ -144,14 +116,8 @@ export const getUserImage = (userId) => {
 };
 
 export const getPlusIcon = () => {
-  return <div class="top-icons plus-icon"></div>;
+  return <img src={add} alt="Add" className="svgIcon" />;
 };
 export const getEllipseIcon = () => {
-  return (
-    <div class="top-icons ellipsis-icon">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-    </div>
-  );
+  return <img src={menu} alt="Menu" className="svgIcon" />;
 };

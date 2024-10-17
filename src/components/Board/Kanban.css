@@ -2,24 +2,21 @@
 
 /* kanban column css starts here */
 .kanban-container {
-  height: 100vh; 
-  overflow-x: auto; /* Enable horizontal scrolling */
-  display: flex; 
-  align-items: center; 
-  padding: 16px; 
+  height: 100vh;
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  padding: 16px;
 }
 
 /* Kanban columns style */
 .kanban-columns {
   display: grid;
-  grid-auto-flow: column; /* Makes the grid flow horizontally */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  );
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 16px;
-  height: 100%; /* Full height to match the container */
-  overflow-x: auto; /* Enable horizontal scrolling */
+  height: 100%;
+  overflow-x: auto;
 }
 
 /* Hide scrollbar for aesthetics */
@@ -30,9 +27,9 @@
 /* Column styling */
 .column {
   padding: 16px;
-  min-width: 300px; 
+  min-width: 300px;
   box-sizing: border-box;
-  height: 100%; 
+  height: 100%;
 }
 
 .top {
@@ -49,8 +46,9 @@
 }
 
 .top-left .priority-box .title,
-.top-left .user-box .title {
-  margin-left: 8px;
+.top-left .user-box .title,
+.top-left .status-box .title {
+  margin-left: 10px;
 }
 
 .top-left .count {
@@ -89,6 +87,7 @@
   color: var(--black);
   font-size: 12px;
   font-weight: 500;
+  gap: 8px;
   margin-bottom: 5px;
 }
 
@@ -104,8 +103,17 @@
 .kanban-card .desc {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   color: var(--dark-gray);
+}
+
+.kanban-card .desc .priority {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  border: 1px solid var(--light-gray);
+  border-radius: 3px;
 }
 
 .kanban-card .dot {
@@ -125,6 +133,6 @@
   border-radius: 3px;
 }
 
-.d-none{
+.d-none {
   display: none;
 }

@@ -1,0 +1,18 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #808080;
+  --theme-gray: #f4f6fa;
+  --light-gray: #d3d3d3;
+  --dark-gray: #a9a9a9;
+  --text-gray: #c0c2c6;
+
+  --padding-x: 25px;
+}
+
+/* --border-color: #d0d0d0;
+  --hover-bg-color: #f8f9fa;
+  --hover-border-color: #c0c0c0;
+  --dropdown-bg-color: #f6fafb;
+  --label-color: #9fa0a2;
+  --focus-border-color: #888; */

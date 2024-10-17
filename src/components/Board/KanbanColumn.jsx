@@ -9,6 +9,15 @@ import {
 } from "../Icon/Icon";
 import "./Kanban.css";
 
+function capitalizeWords(str) {
+  return str
+    .split(" ")
+    .map((word) => {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(" ");
+}
+
 const KanbanColumn = ({ title, tickets = [], users, groupBy }) => {
   // Ensure tickets is an array
   if (!Array.isArray(tickets)) {
@@ -52,7 +61,7 @@ const KanbanColumn = ({ title, tickets = [], users, groupBy }) => {
           {groupBy === "priority" && (
             <div className="box priority-box">
               {getPriorityIconByText(title)}{" "}
-              <span className="title">{title}</span>
+              <span className="title">{capitalizeWords(title)}</span>
               <span className="count">{tickets.length} </span>
             </div>
           )}

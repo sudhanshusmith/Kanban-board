@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { DownArrowIcon, UpArrowIcon } from "../../components/Icon";
+import { DownArrowIcon, UpArrowIcon } from "../Icon/Icon";
 import "./Navbar.css";
 
 const Navbar = ({ groupBy, orderBy, setGroupBy, setOrderBy }) => {

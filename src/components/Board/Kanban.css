@@ -36,6 +36,37 @@
   height: 100%; /* Make each column fill the full height of the container */
 }
 
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-left .box {
+  display: flex;
+  justify-content: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.top-left .priority-box .title,
+.top-left .user-box .title {
+  margin-left: 8px;
+}
+
+.top-left .count {
+  color: var(--dark-gray);
+  margin-left: 8px;
+}
+
+.top .top-right {
+  display: flex;
+  gap: 10px;
+  justify-content: row;
+  align-items: center;
+  justify-content: center;
+}
+
 /* kanban card css starts here  */
 
 .kanban-card {
@@ -93,4 +124,8 @@
   border: 1px solid var(--light-gray);
   padding: 3px 5px;
   border-radius: 3px;
+}
+
+.d-none{
+  display: none;
 }

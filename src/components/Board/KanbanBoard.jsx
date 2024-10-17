@@ -169,6 +169,7 @@ const KanbanBoard = ({
             title={group}
             tickets={sortedTickets(groupedTickets[group]?.tickets || [])}
             users={users}
+            groupBy={groupBy}
           />
         ))}
       </div>

@@ -58,7 +58,7 @@ const Navbar = ({ groupBy, orderBy, setGroupBy, setOrderBy }) => {
       <div className="dropdown-container" ref={dropdownRef}>
         <button className="dropdown-button" onClick={toggleDropdown}>
           <span className="material-icons icon">tune</span>
-          Display
+          <span className="text">Display</span>
           <span className="icon">
             {isOpen ? <UpArrowIcon /> : <DownArrowIcon />}
           </span>

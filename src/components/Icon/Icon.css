@@ -103,14 +103,14 @@
   border-radius: 50%;
   margin-right: 8px;
   position: relative;
-  font-size: 8px; /* If using text content, make it smaller too */
+  font-size: 8px; 
 }
-/* Todo Status - Hollow Circle */
+/* Todo Status */
 .todo-icon {
   border: 2px solid #ccc; /* Light gray border */
 }
 
-/* In Progress Status - Yellow Circle with semi-filled design */
+/* In Progress Status */
 .in-progress-icon {
   position: relative;
   border: 2px solid #fbc02d; /* Yellow border */
@@ -129,7 +129,7 @@
   left: 25%;
 }
 
-/* Done Status - Checkmark in blue circle */
+/* Done Status */
 .done-icon {
   background-color: #3f51b5; /* Blue background */
   color: white;
@@ -139,7 +139,7 @@
   justify-content: center;
 }
 
-/* Canceled Status - X in gray circle */
+/* Canceled Status  */
 .canceled-icon {
   background-color: #b0bec5; /* Gray background */
   color: white;
@@ -150,7 +150,7 @@
   justify-content: center;
 }
 
-/* Default Status (Spinner) */
+
 /* Default Status - Dotted Circle */
 .default-icon {
   border: 2px dotted #ccc; /* Dotted gray border */
@@ -181,7 +181,6 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  /* border: px solid white; */
   box-shadow: 0 0 0 2px white;
 }
 
@@ -236,7 +235,7 @@
 /* Ellipsis Icon */
 .ellipsis-icon {
   display: flex;
-  gap: 2px; /* Space between dots */
+  gap: 2px; 
 }
 
 /* Dots in the ellipsis */

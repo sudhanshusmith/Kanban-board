@@ -40,9 +40,9 @@ function App() {
     localStorage.setItem("orderBy", orderBy);
   }, [orderBy]);
 
-  // Show a loading message or spinner while fetching data
+  // Show a loading message while fetching data
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   return (

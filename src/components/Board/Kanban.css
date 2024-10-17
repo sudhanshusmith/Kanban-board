@@ -1,13 +1,12 @@
 @import url("../../styles/variables.css");
 
 /* kanban column css starts here */
-/* Container takes the full viewport height */
 .kanban-container {
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
   overflow-x: auto; /* Enable horizontal scrolling */
-  display: flex; /* Use flex to make it span full height */
-  align-items: center; /* Center content vertically */
-  padding: 16px; /* Optional padding */
+  display: flex; 
+  align-items: center; 
+  padding: 16px; 
 }
 
 /* Kanban columns style */
@@ -17,13 +16,13 @@
   grid-template-columns: repeat(
     auto-fit,
     minmax(300px, 1fr)
-  ); /* Responsive columns */
+  );
   gap: 16px;
   height: 100%; /* Full height to match the container */
   overflow-x: auto; /* Enable horizontal scrolling */
 }
 
-/* Optional: Hide scrollbar for aesthetics */
+/* Hide scrollbar for aesthetics */
 .kanban-container::-webkit-scrollbar {
   display: none;
 }
@@ -31,9 +30,9 @@
 /* Column styling */
 .column {
   padding: 16px;
-  min-width: 300px; /* Minimum width for each column */
+  min-width: 300px; 
   box-sizing: border-box;
-  height: 100%; /* Make each column fill the full height of the container */
+  height: 100%; 
 }
 
 .top {

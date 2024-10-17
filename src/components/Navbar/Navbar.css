@@ -5,6 +5,10 @@
   padding: 10px var(--padding-x);
 }
 
+.navbar .text {
+  color: var(--black);
+}
+
 /* outside dropdown boxes and cards css starts here */
 
 .dropdown-container {

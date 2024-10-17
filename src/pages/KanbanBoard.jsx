@@ -4,8 +4,8 @@ import KanbanColumn from "../KanbanColumn";
 const KanbanBoard = ({
   tickets = [],
   users = [],
-  grouping = "status",
-  sortBy = "priority",
+  groupBy = "status",
+  orderBy = "priority",
 }) => {
   if (!Array.isArray(tickets) || tickets.length === 0) {
     console.error("No valid tickets array found or the tickets array is empty");
@@ -13,7 +13,7 @@ const KanbanBoard = ({
   }
 
   const groupTickets = () => {
-    switch (grouping) {
+    switch (groupBy) {
       case "status":
         const defaultStatuses = {
           Todo: { count: 0, tickets: [] },
@@ -103,9 +103,9 @@ const KanbanBoard = ({
   const sortedTickets = (group) => {
     if (!Array.isArray(group)) return []; // Ensure 'group' is an array
     return group.sort((a, b) => {
-      if (sortBy === "priority") {
+      if (orderBy === "priority") {
         return b.priority - a.priority;
-      } else if (sortBy === "title") {
+      } else if (orderBy === "title") {
         return a.title.localeCompare(b.title);
       }
       return 0;
@@ -114,7 +114,7 @@ const KanbanBoard = ({
 
   // Ordering the groups based on the predefined order and moving zero count groups to the end
   const sortGroups = (groups) => {
-    if (grouping === "status") {
+    if (groupBy === "status") {
       const statusOrder = [
         "Backlog",
         "Todo",
@@ -135,7 +135,7 @@ const KanbanBoard = ({
 
         return aIndex - bIndex;
       });
-    } else if (grouping === "priority") {
+    } else if (groupBy === "priority") {
       const priorityOrder = ["No Priority", "Urgent", "High", "Medium", "Low"];
       return groups.sort((a, b) => {
         const aIndex = priorityOrder.indexOf(a);
@@ -152,7 +152,7 @@ const KanbanBoard = ({
       });
     }
 
-    // For user grouping, no special ordering needed
+    // For user groupBy, no special ordering needed
     return groups;
   };
 

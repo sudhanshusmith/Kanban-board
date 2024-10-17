@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import KanbanBoard from "./components/KanbanBoard";
+import KanbanBoard from "./pages/KanbanBoard";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
@@ -56,8 +56,8 @@ function App() {
       <KanbanBoard
         tickets={tickets}
         users={users}
-        grouping={groupBy}
-        sortBy={orderBy}
+        groupBy={groupBy}
+        orderBy={orderBy}
       />
     </div>
   );

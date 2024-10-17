@@ -1,7 +1,8 @@
 import React from "react";
 import KanbanCard from "./KanbanCard";
+import "./Kanban.css";
 
-const KanbanColumn = ({ title, tickets = [] }) => {
+const KanbanColumn = ({ title, tickets = [], users}) => {
   // Ensure tickets is an array
   if (!Array.isArray(tickets)) {
     console.error("KanbanColumn received tickets that is not an array");
@@ -11,12 +12,12 @@ const KanbanColumn = ({ title, tickets = [] }) => {
   console.log("col", title, tickets);
 
   return (
-    <div className="kanban-column">
+    <div className="column">
       <h2>{title}</h2>
       {tickets.length === 0 ? (
         <p>No tickets available for this category</p>
       ) : (
-        tickets.map((ticket) => <KanbanCard key={ticket.id} ticket={ticket} />)
+        tickets.map((ticket) => <KanbanCard key={ticket.id} ticket={ticket} users={users} />)
       )}
     </div>
   );

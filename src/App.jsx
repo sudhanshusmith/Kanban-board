@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import KanbanBoard from "./pages/KanbanBoard";
+import KanbanBoard from "./components/Board/KanbanBoard";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {

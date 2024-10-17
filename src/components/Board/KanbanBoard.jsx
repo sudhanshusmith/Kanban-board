@@ -1,5 +1,6 @@
 import React from "react";
-import KanbanColumn from "../KanbanColumn";
+import KanbanColumn from "./KanbanColumn";
+import "./Kanban.css";
 
 const KanbanBoard = ({
   tickets = [],
@@ -160,14 +161,17 @@ const KanbanBoard = ({
   const sortedGroups = sortGroups(Object.keys(groupedTickets));
 
   return (
-    <div className="kanban-board">
-      {sortedGroups.map((group) => (
-        <KanbanColumn
-          key={group}
-          title={group}
-          tickets={sortedTickets(groupedTickets[group]?.tickets || [])}
-        />
-      ))}
+    <div className="kanban-container">
+      <div className="kanban-columns">
+        {sortedGroups.map((group) => (
+          <KanbanColumn
+            key={group}
+            title={group}
+            tickets={sortedTickets(groupedTickets[group]?.tickets || [])}
+            users={users}
+          />
+        ))}
+      </div>
     </div>
   );
 };

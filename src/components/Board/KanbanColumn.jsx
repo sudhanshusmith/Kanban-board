@@ -16,8 +16,6 @@ const KanbanColumn = ({ title, tickets = [], users, groupBy }) => {
     return null;
   }
 
-  console.log("col", title, tickets);
-
   let user;
   if (groupBy === "user") {
     user = users.find((user) => user.id === tickets[0].userId);
